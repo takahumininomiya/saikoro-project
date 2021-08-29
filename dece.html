@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>サイコロプログラム</title>
+    <script>
+function getImage(){
+  //画像ファイル名を配列で保持
+  var arr = ['img/saikoro1.jpeg', 'img/saikoro2.jpeg', 'img/saikoro3.jpeg','img/saikoro4.jpeg','img/saikoro5.jpeg','saikoro6.jpeg'];
+ 
+  //ランダムで画像ファイルを取得して表示する
+  var obj = document.getElementById("im1");
+  var a = Math.floor(Math.random() * arr.length);
+  obj.src = arr[a];
+}
+</script>
+</head>
+<body>
+<input type="button" value="サイコロを振る" onclick="getImage()">
+  <img id="im1" alt="ここに表示されます。">
+</body>
+</html>
